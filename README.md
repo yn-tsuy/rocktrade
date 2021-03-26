@@ -1,6 +1,6 @@
 # rocktrade
 
-Técnologias utilizadas no desenvolvimento da aplicação: <strong> CSS/SASS - JAVASCRIPT / JQUERY - HTML </strong>
+Tecnologias utilizadas no desenvolvimento da aplicação: <strong> CSS/SASS - JAVASCRIPT / JQUERY - HTML </strong>
 
 O sistema contempla uma <strong>tela inicial</strong> que contém a <strong>foto,</strong> o <strong>nome do usuário,</strong> o logo da empresa e uma barra lateral que contém os produtos da empresa.
 
