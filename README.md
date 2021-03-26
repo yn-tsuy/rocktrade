@@ -12,7 +12,7 @@ Em cada tela de produto o usuário irá encontrar um menu no canto superior esqu
 
 O sistema se trata de uma aplicação <strong>web single aplication</strong>, e todas as telas apresentam <strong>responsividade</strong>.
 
-Caso me fosse dado mais tempo para o desenvolvimento, planejaria melhor a questão da <strong>experiência do usuáro</strong> com <strong>melhorias tanto no código quanto ,a interface</strong> do usuário enrriquecendo-a com imagens pertinentes a cada estratégia e melhorias em detalhes como padding, margin e animações. Tabmém utilizaria react ou javascript puro ao invés de jquery.
+Caso me fosse dado mais tempo para o desenvolvimento, planejaria melhor a questão da <strong>experiência do usuáro</strong> com <strong>melhorias tanto no código quanto na interface</strong> do usuário enrriquecendo-a com imagens pertinentes a cada estratégia e melhorias em detalhes como padding, margin e animações. Tabmém utilizaria react ou javascript puro ao invés de jquery.
 
 Descrição de melhorias:
 
