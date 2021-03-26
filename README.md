@@ -18,7 +18,7 @@ Descrição de melhorias:
 
 Desenvolveria uma barra lateral fixa com valor de width baixo contendo apenas o ícone de cada estratégia e no hover da barra lateral, o label com o nome da estratégia apareceria, e sempre que o usuário clicasse no link apenas a parte direita da tela iria redirecionar o usuário para a tela da estratégia selecionada. Faria essa alteração no sistema com o intuito de não apenas melhorar a experiência do usuário bem como a manutenção do código, por exemplo, caso um novo produto fosse lançado pela empresa a alteração do sistema seria minimizada para a criação de uma nova tela, referente ao novo produto, e o link do produto seria colocado em apenas no máximo dois lugares: na barra lateral fixa e no menu responsivo para dispositivos com telas menores.
 
-Também estudaria a framework react para o projeto ou usuaria javascript puro, utilizei jquery ao invés de javascript pois este diminui as linhas de código e, por consequência, diminui o tempo de desenvolvimento. 
+Também estudaria a framework React para o projeto ou usuaria Javascript puro, utilizei jquery ao invés de javascript pois este diminui as linhas de código e, por consequência, diminui o tempo de desenvolvimento.  E o React demandaria tempo para a curva de aprendizado e estava trabalhando com uma deadline.
 
 Desafio solicitado pela: Rocktrade
 Desenvolvedora: Janaína Santos da Silva | she.jcodes@gmail.com
