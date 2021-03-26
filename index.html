@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- meta tag referente a responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rocktrade - visualize seus ativos</title>
+    <!-- logo da empresa no fav icon -->
+    <link rel="shortcut icon" type="image/jpg" href="/assets/sources/logo_small_icon_fav.png" />
+    <!-- importação de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- importações de estilo -->
+    <link rel="stylesheet" href="/assets/styles/style.css">
+</head>
+
+<body>
+
+    <!-- tela de loading chamada ao recarregar a página -->
+    <!-- #region carregar página -->
+    <div class="carrega_pagina_rocktrade">
+        <div class="carrega_pagina_rocktrade__spinner">
+            <img src="/assets/sources/logo_small_icon.png" alt="rocktrade" class="carrega_pagina_rocktrade__logo">
+        </div>
+        <img src="/assets/sources/logo_small.png" alt="rocktrade" class="carrega_pagina_rocktrade__logo">
+    </div>
+    <!-- #endregion -->
+    <!-- tela principal -->
+    <!-- #region principal -->
+
+    <main class="principal">
+        <div class="principal__conteudo">
+            <div class="principal__conteudo__top">
+                <div class="principal__conteudo__top--logo">
+                    <img src="/assets/sources/logo_small.png">
+                </div>
+                <div class="principal__conteudo__top__user_information">
+                    <div class="principal__conteudo__top__user_information--imagem"></div>
+                    <div class="principal__conteudo__top__user_information--nome"> Usuário </div>
+                </div>
+            </div>
+            <div class="principal__conteudo__bottom">
+                <div class="principal__conteudo__bottom__menu">
+                    <nav class="principal__conteudo__bottom__menu__nav">
+                        <ul class="principal__conteudo__bottom__menu__nav__ul">
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li ativo lkHome">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li lkAtlantico">
+                                <a href="#">Atlântico</a>
+                            </li>
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li lbBigRocks">
+                                <a href="#">Big Rocks</a>
+                            </li>
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li lkIbov">
+                                <a href="#">IBOV Machine</a>
+                            </li>
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li lkIndi">
+                                <a href="#">INDI</a>
+                            </li>
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li lkRocket">
+                                <a href="#">Rocket5</a>
+                            </li>
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li lkSmall">
+                                <a href="#">Small Rocks</a>
+                            </li>
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li lkSmart">
+                                <a href="#">Smart Dividendos</a>
+                            </li>
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li lkTatica">
+                                <a href="#">Tática do Dólar</a>
+                            </li>
+                            <li class="principal__conteudo__bottom__menu__nav__ul__li lkNasdaq">
+                                <a href="#">The Big Rocks for Nasdaq</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="principal__conteudo__bottom__welcome"></div>
+                <div class="principal__conteudo__bottom__mobile hide-on-desk">
+                    <div class="principal__conteudo__bottom__mobile__conteudo">
+                        <div class="principal__conteudo__bottom__mobile__conteudo--user_picture_mobile"></div>
+                        <div class="principal__conteudo__bottom__mobile__conteudo--user_name_mobile">Usuário</div>
+                        <label for="menu_principal" class="menu">
+                            <span class="first"></span>
+                            <span class="second"></span>
+                            <span class="third"></span>
+                        </label>
+                        <input type="checkbox" name="menu_principal" id="menu_principal">
+                        <div class="menu_principal__dropdown">
+                            <div class="menu_principal__dropdown__conteudo">
+                                <nav class="menu_principal__dropdown__conteudo__nav">
+                                    <ul class="menu_principal__dropdown__conteudo__nav__ul">
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li ativo lkHome">
+                                            <a href="#">Home</a>
+                                        </li>
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li lkAtlantico">
+                                            <a href="#">Atlântico</a>
+                                        </li>
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li lbBigRocks">
+                                            <a href="#">Big Rocks</a>
+                                        </li>
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li lkIbov">
+                                            <a href="#">IBOV Machine</a>
+                                        </li>
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li lkIndi">
+                                            <a href="#">INDI</a>
+                                        </li>
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li lkRocket">
+                                            <a href="#">Rocket5</a>
+                                        </li>
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li lkSmall">
+                                            <a href="#">Small Rocks</a>
+                                        </li>
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li lkSmart">
+                                            <a href="#">Smart Dividendos</a>
+                                        </li>
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li lkTatica">
+                                            <a href="#">Tática do Dólar</a>
+                                        </li>
+                                        <li class="menu_principal__dropdown__conteudo__nav__ul__li lkNasdaq">
+                                            <a href="#">The Big Rocks for Nasdaq</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- #endregion principal -->
+    <!-- tela referente ao produto atlântico -->
+    <!-- #region Atlântico -->
+    <section class="atlantico">
+        <div class="atlantico__conteudo">
+            <div class="atlantico__conteudo__topo">
+                <div class="atlantico__conteudo__topo__top">
+                    <label for="atlMenu" class="atlantico__conteudo__topo__top__menu">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <input type="checkbox" name="atlMenu" id="atlMenu">
+                    <div class="menu__atlantico__dropdown">
+                        <div class="menu__atlantico__dropdown__conteudo">
+                            <nav class="menu__atlantico__dropdown__conteudo__nav">
+                                <ul class="menu__atlantico__dropdown__conteudo__nav__ul">
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li lkHome">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li ativo lkAtlantico">
+                                        <a href="#">Atlântico</a>
+                                    </li>
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li lbBigRocks">
+                                        <a href="#">Big Rocks</a>
+                                    </li>
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li lkIbov">
+                                        <a href="#">IBOV Machine</a>
+                                    </li>
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li lkIndi">
+                                        <a href="#">INDI</a>
+                                    </li>
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li lkRocket">
+                                        <a href="#">Rocket5</a>
+                                    </li>
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li lkSmall">
+                                        <a href="#">Small Rocks</a>
+                                    </li>
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li lkSmart">
+                                        <a href="#">Smart Dividendos</a>
+                                    </li>
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li lkTatica">
+                                        <a href="#">Tática do Dólar</a>
+                                    </li>
+                                    <li class="menu__atlantico__dropdown__conteudo__nav__ul__li lkNasdaq">
+                                        <a href="#">The Big Rocks for Nasdaq</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="atlantico__conteudo__topo__top__right">
+                        <!-- <img src="/assets/sources/" alt=""> -->
+                    </div>
+                    <div class="atlantico__conteudo__topo__top__left">
+                        <img src="/assets/sources/logo-atl.png">
+                    </div>
+                </div>
+                <div class="atlantico__conteudo__topo__nav">
+                    <nav class="atlantico__conteudo__topo__nav__nav">
+                        <ul class="atlantico__conteudo__topo__nav__nav__ul">
+                            <li class="atlantico__conteudo__topo__nav__nav__ul__li ativo lkAtlNovosTrades">
+                                <span>Novos&nbsp;</span><span>trades</span> </li>
+                            <li class="atlantico__conteudo__topo__nav__nav__ul__li lkAtlEncerrarTrades">
+                                <span>Encerrar&nbsp;</span>
+                                <span>trades</span> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="atlantico__conteudo__bottom">
+
+                <!-- #region novos trades -->
+                <div class="atlantico__conteudo__bottom__novostrades">
+                    <!-- #region ordem de compra novos trades -->
+                    <div class="atlantico__conteudo__bottom__novostrades__ordemcompra">
+                        <div class="atlantico__conteudo__bottom__novostrades__ordemcompra__top">
+                            <div class="atlantico__conteudo__bottom__novostrades__ordemcompra__top__topo">
+                                <div
+                                    class="atlantico__conteudo__bottom__novostrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="atlantico__conteudo__bottom__novostrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="atlantico__conteudo__bottom__novostrades__ordemcompra__bottom">
+                            <div class="atlantico__conteudo__bottom__novostrades__ordemcompra__bottom__left">
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                            </div>
+                            <div class="atlantico__conteudo__bottom__novostrades__ordemcompra__bottom__right">
+                                <p class="atlantico__conteudo__bottom__novostrades__ordemcompra__bottom__right--titulo">
+                                    Quantidade
+                                </p>
+                                <p
+                                    class="atlantico__conteudo__bottom__novostrades__ordemcompra__bottom__right--quantidade">
+                                    1000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion ordem de compra novos trades -->
+                    <!-- #region ordem de venda novos trades -->
+                    <div class="atlantico__conteudo__bottom__novostrades__ordemvenda">
+                        <div class="atlantico__conteudo__bottom__novostrades__ordemvenda__top">
+                            <div class="atlantico__conteudo__bottom__novostrades__ordemvenda__top__topo">
+                                <div
+                                    class="atlantico__conteudo__bottom__novostrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp;<span> venda</span>
+                                </div>
+                            </div>
+                            <div class="atlantico__conteudo__bottom__novostrades__ordemvenda__top--ativo">ITUB4</div>
+                        </div>
+                        <div class="atlantico__conteudo__bottom__novostrades__ordemvenda__bottom">
+                            <div class="atlantico__conteudo__bottom__novostrades__ordemvenda__bottom__left">
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                            </div>
+                            <div class="atlantico__conteudo__bottom__novostrades__ordemvenda__bottom__right">
+                                <p class="atlantico__conteudo__bottom__novostrades__ordemvenda__bottom__right--titulo">
+                                    Quantidade</p>
+                                <p
+                                    class="atlantico__conteudo__bottom__novostrades__ordemvenda__bottom__right--quantidade">
+                                    1000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion novos trades -->
+                </div>
+                <!-- #endregion novos trades -->
+
+                <!-- #region encerrar trades -->
+                <div class="atlantico__conteudo__bottom__encerrartrades hidden">
+                    <!-- #region encerrar trades ordem de compra -->
+                    <div class="atlantico__conteudo__bottom__encerrartrades__ordemcompra">
+                        <div class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__top">
+                            <div class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__top__topo">
+                                <div
+                                    class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom">
+                            <div class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__top">
+                                <div
+                                    class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div
+                                    class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom">
+                                <div
+                                    class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital">
+                                    <div
+                                        class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="atlantico__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #endregion -->
+
+                    <!-- #region encerrar trades ordem de venda -->
+                    <div class="atlantico__conteudo__bottom__encerrartrades__ordemvenda">
+                        <div class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__top">
+                            <div class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__top__topo">
+                                <div
+                                    class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp; <span> venda</span>
+                                </div>
+                            </div>
+                            <div class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom">
+                            <div class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__top">
+                                <div class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div
+                                    class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom">
+                                <div
+                                    class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital">
+                                    <div
+                                        class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="atlantico__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+    </section>
+    <!-- #endregion Atlântico -->
+    <!-- tela referente ao produto bigk rocks -->
+    <!-- #region bigrocks -->
+
+    <section class="bigrocks">
+        <div class="bigrocks__conteudo">
+            <div class="bigrocks__conteudo__topo">
+                <div class="bigrocks__conteudo__topo__top">
+                    <label for="bigRocksMenu" class="bigrocks__conteudo__topo__top__menu">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <input type="checkbox" name="bigRocksMenu" id="bigRocksMenu">
+                    <div class="menu__bigrocks__dropdown">
+                        <div class="menu__bigrocks__dropdown__conteudo">
+                            <nav class="menu__bigrocks__dropdown__conteudo__nav">
+                                <ul class="menu__bigrocks__dropdown__conteudo__nav__ul">
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li lkHome">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li lkAtlantico">
+                                        <a href="#">Atlântico</a>
+                                    </li>
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li ativo lbBigRocks">
+                                        <a href="#">Big Rocks</a>
+                                    </li>
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li lkIbov">
+                                        <a href="#">IBOV Machine</a>
+                                    </li>
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li lkIndi">
+                                        <a href="#">INDI</a>
+                                    </li>
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li lkRocket">
+                                        <a href="#">Rocket5</a>
+                                    </li>
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li lkSmall">
+                                        <a href="#">Small Rocks</a>
+                                    </li>
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li lkSmart">
+                                        <a href="#">Smart Dividendos</a>
+                                    </li>
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li lkTatica">
+                                        <a href="#">Tática do Dólar</a>
+                                    </li>
+                                    <li class="menu__bigrocks__dropdown__conteudo__nav__ul__li lkNasdaq">
+                                        <a href="#">The Big Rocks for Nasdaq</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="bigrocks__conteudo__topo__top__right">
+                        <!-- <img src="/assets/sources/" alt=""> -->
+                    </div>
+                    <div class="bigrocks__conteudo__topo__top__left">
+                        <img src="/assets/sources/logo-bgRocks.png">
+                    </div>
+                </div>
+                <div class="bigrocks__conteudo__topo__nav">
+                    <nav class="bigrocks__conteudo__topo__nav__nav">
+                        <ul class="bigrocks__conteudo__topo__nav__nav__ul">
+                            <li class="bigrocks__conteudo__topo__nav__nav__ul__li ativo lkbigrocksNovosTrades">
+                                <span>Novos&nbsp;</span><span>trades</span> </li>
+                            <li class="bigrocks__conteudo__topo__nav__nav__ul__li lkbigrocksEncerrarTrades">
+                                <span>Encerrar&nbsp;</span>
+                                <span>trades</span> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="bigrocks__conteudo__bottom">
+
+                <!-- #region novos trades -->
+                <div class="bigrocks__conteudo__bottom__novostrades">
+                    <!-- #region ordem de compra novos trades -->
+                    <div class="bigrocks__conteudo__bottom__novostrades__ordemcompra">
+                        <div class="bigrocks__conteudo__bottom__novostrades__ordemcompra__top">
+                            <div class="bigrocks__conteudo__bottom__novostrades__ordemcompra__top__topo">
+                                <div
+                                    class="bigrocks__conteudo__bottom__novostrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="bigrocks__conteudo__bottom__novostrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="bigrocks__conteudo__bottom__novostrades__ordemcompra__bottom">
+                            <div class="bigrocks__conteudo__bottom__novostrades__ordemcompra__bottom__left">
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                            </div>
+                            <div class="bigrocks__conteudo__bottom__novostrades__ordemcompra__bottom__right">
+                                <p class="bigrocks__conteudo__bottom__novostrades__ordemcompra__bottom__right--titulo">
+                                    Quantidade
+                                </p>
+                                <p
+                                    class="bigrocks__conteudo__bottom__novostrades__ordemcompra__bottom__right--quantidade">
+                                    1000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion ordem de compra novos trades -->
+                    <!-- #region ordem de venda novos trades -->
+                    <div class="bigrocks__conteudo__bottom__novostrades__ordemvenda">
+                        <div class="bigrocks__conteudo__bottom__novostrades__ordemvenda__top">
+                            <div class="bigrocks__conteudo__bottom__novostrades__ordemvenda__top__topo">
+                                <div class="bigrocks__conteudo__bottom__novostrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp;<span> venda</span>
+                                </div>
+                            </div>
+                            <div class="bigrocks__conteudo__bottom__novostrades__ordemvenda__top--ativo">ITUB4</div>
+                        </div>
+                        <div class="bigrocks__conteudo__bottom__novostrades__ordemvenda__bottom">
+                            <div class="bigrocks__conteudo__bottom__novostrades__ordemvenda__bottom__left">
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                            </div>
+                            <div class="bigrocks__conteudo__bottom__novostrades__ordemvenda__bottom__right">
+                                <p class="bigrocks__conteudo__bottom__novostrades__ordemvenda__bottom__right--titulo">
+                                    Quantidade</p>
+                                <p
+                                    class="bigrocks__conteudo__bottom__novostrades__ordemvenda__bottom__right--quantidade">
+                                    1000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion novos trades -->
+                </div>
+                <!-- #endregion novos trades -->
+
+                <!-- #region encerrar trades -->
+                <div class="bigrocks__conteudo__bottom__encerrartrades hidden">
+                    <!-- #region encerrar trades ordem de compra -->
+                    <div class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra">
+                        <div class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__top">
+                            <div class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__top__topo">
+                                <div
+                                    class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom">
+                            <div class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__top">
+                                <div class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div
+                                    class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom">
+                                <div
+                                    class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital">
+                                    <div
+                                        class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="bigrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #endregion -->
+
+                    <!-- #region encerrar trades ordem de venda -->
+                    <div class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda">
+                        <div class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__top">
+                            <div class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__top__topo">
+                                <div
+                                    class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp; <span> venda</span>
+                                </div>
+                            </div>
+                            <div class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom">
+                            <div class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__top">
+                                <div class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom">
+                                <div
+                                    class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital">
+                                    <div
+                                        class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="bigrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+    </section>
+
+    <!-- #endregion bigrocks -->
+    <!-- tela referente ao produto ibov -->
+    <!-- #region ibov -->
+
+    <section class="ibov">
+        <div class="ibov__conteudo">
+            <div class="ibov__conteudo__topo">
+                <div class="ibov__conteudo__topo__top">
+                    <label for="ibovMenu" class="ibov__conteudo__topo__top__menu">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <input type="checkbox" name="ibovMenu" id="ibovMenu">
+                    <div class="menu__ibov__dropdown">
+                        <div class="menu__ibov__dropdown__conteudo">
+                            <nav class="menu__ibov__dropdown__conteudo__nav">
+                                <ul class="menu__ibov__dropdown__conteudo__nav__ul">
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li lkHome">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li lkAtlantico">
+                                        <a href="#">Atlântico</a>
+                                    </li>
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li lbBigRocks">
+                                        <a href="#">Big Rocks</a>
+                                    </li>
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li ativo lkIbov">
+                                        <a href="#">IBOV Machine</a>
+                                    </li>
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li lkIndi">
+                                        <a href="#">INDI</a>
+                                    </li>
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li lkRocket">
+                                        <a href="#">Rocket5</a>
+                                    </li>
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li lkSmall">
+                                        <a href="#">Small Rocks</a>
+                                    </li>
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li lkSmart">
+                                        <a href="#">Smart Dividendos</a>
+                                    </li>
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li lkTatica">
+                                        <a href="#">Tática do Dólar</a>
+                                    </li>
+                                    <li class="menu__ibov__dropdown__conteudo__nav__ul__li lkNasdaq">
+                                        <a href="#">The Big Rocks for Nasdaq</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="ibov__conteudo__topo__top__right">
+                        <!-- <img src="/assets/sources/" alt=""> -->
+                    </div>
+                    <div class="ibov__conteudo__topo__top__left">
+                        <img src="/assets/sources/ibov-logomaior.png">
+                    </div>
+                </div>
+                <div class="ibov__conteudo__topo__nav">
+                    <nav class="ibov__conteudo__topo__nav__nav">
+                        <ul class="ibov__conteudo__topo__nav__nav__ul">
+                            <li class="ibov__conteudo__topo__nav__nav__ul__li ativo lkibovNovosTrades">
+                                <span>Novos&nbsp;</span><span>trades</span> </li>
+                            <li class="ibov__conteudo__topo__nav__nav__ul__li lkibovEncerrarTrades">
+                                <span>Encerrar&nbsp;</span>
+                                <span>trades</span> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="ibov__conteudo__bottom">
+
+                <!-- #region novos trades -->
+                <div class="ibov__conteudo__bottom__novostrades">
+                    <!-- #region ordem de compra novos trades -->
+                    <div class="ibov__conteudo__bottom__novostrades__ordemcompra">
+                        <div class="ibov__conteudo__bottom__novostrades__ordemcompra__top">
+                            <div class="ibov__conteudo__bottom__novostrades__ordemcompra__top__topo">
+                                <div class="ibov__conteudo__bottom__novostrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="ibov__conteudo__bottom__novostrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="ibov__conteudo__bottom__novostrades__ordemcompra__bottom">
+                            <div class="ibov__conteudo__bottom__novostrades__ordemcompra__bottom__left">
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                            </div>
+                            <div class="ibov__conteudo__bottom__novostrades__ordemcompra__bottom__right">
+                                <p class="ibov__conteudo__bottom__novostrades__ordemcompra__bottom__right--titulo">
+                                    Quantidade
+                                </p>
+                                <p class="ibov__conteudo__bottom__novostrades__ordemcompra__bottom__right--quantidade">
+                                    1000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion ordem de compra novos trades -->
+                    <!-- #region ordem de venda novos trades -->
+                    <div class="ibov__conteudo__bottom__novostrades__ordemvenda">
+                        <div class="ibov__conteudo__bottom__novostrades__ordemvenda__top">
+                            <div class="ibov__conteudo__bottom__novostrades__ordemvenda__top__topo">
+                                <div class="ibov__conteudo__bottom__novostrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp;<span> venda</span>
+                                </div>
+                            </div>
+                            <div class="ibov__conteudo__bottom__novostrades__ordemvenda__top--ativo">ITUB4</div>
+                        </div>
+                        <div class="ibov__conteudo__bottom__novostrades__ordemvenda__bottom">
+                            <div class="ibov__conteudo__bottom__novostrades__ordemvenda__bottom__left">
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                            </div>
+                            <div class="ibov__conteudo__bottom__novostrades__ordemvenda__bottom__right">
+                                <p class="ibov__conteudo__bottom__novostrades__ordemvenda__bottom__right--titulo">
+                                    Quantidade</p>
+                                <p class="ibov__conteudo__bottom__novostrades__ordemvenda__bottom__right--quantidade">
+                                    1000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion novos trades -->
+                </div>
+                <!-- #endregion novos trades -->
+
+                <!-- #region encerrar trades -->
+                <div class="ibov__conteudo__bottom__encerrartrades hidden">
+                    <!-- #region encerrar trades ordem de compra -->
+                    <div class="ibov__conteudo__bottom__encerrartrades__ordemcompra">
+                        <div class="ibov__conteudo__bottom__encerrartrades__ordemcompra__top">
+                            <div class="ibov__conteudo__bottom__encerrartrades__ordemcompra__top__topo">
+                                <div
+                                    class="ibov__conteudo__bottom__encerrartrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="ibov__conteudo__bottom__encerrartrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom">
+                            <div class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__top">
+                                <div class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom">
+                                <div
+                                    class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital">
+                                    <div
+                                        class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="ibov__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #endregion -->
+
+                    <!-- #region encerrar trades ordem de venda -->
+                    <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda">
+                        <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda__top">
+                            <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda__top__topo">
+                                <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp; <span> venda</span>
+                                </div>
+                            </div>
+                            <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom">
+                            <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__top">
+                                <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom">
+                                <div
+                                    class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital">
+                                    <div
+                                        class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="ibov__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+    </section>
+
+    <!-- #endregion ibov -->
+    <!-- tela referente ao produto indi -->
+    <!-- #region indi -->
+
+    <section class="indi">
+        <div class="indi__conteudo">
+            <div class="indi__conteudo__topo">
+                <div class="indi__conteudo__topo__top">
+                    <label for="indiMenu" class="indi__conteudo__topo__top__menu">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <input type="checkbox" name="indiMenu" id="indiMenu">
+                    <div class="menu__indi__dropdown">
+                        <div class="menu__indi__dropdown__conteudo">
+                            <nav class="menu__indi__dropdown__conteudo__nav">
+                                <ul class="menu__indi__dropdown__conteudo__nav__ul">
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li lkHome">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li lkAtlantico">
+                                        <a href="#">Atlântico</a>
+                                    </li>
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li lbBigRocks">
+                                        <a href="#">Big Rocks</a>
+                                    </li>
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li lkIbov">
+                                        <a href="#">IBOV Machine</a>
+                                    </li>
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li ativo lkIndi">
+                                        <a href="#">INDI</a>
+                                    </li>
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li lkRocket">
+                                        <a href="#">Rocket5</a>
+                                    </li>
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li lkSmall">
+                                        <a href="#">Small Rocks</a>
+                                    </li>
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li lkSmart">
+                                        <a href="#">Smart Dividendos</a>
+                                    </li>
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li lkTatica">
+                                        <a href="#">Tática do Dólar</a>
+                                    </li>
+                                    <li class="menu__indi__dropdown__conteudo__nav__ul__li lkNasdaq">
+                                        <a href="#">The Big Rocks for Nasdaq</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="indi__conteudo__topo__top__right">
+                        <!-- <img src="/assets/sources/" alt=""> -->
+                    </div>
+                    <div class="indi__conteudo__topo__top__left">
+                        <img src="/assets/sources/logo-indi.png">
+                    </div>
+                </div>
+                <div class="indi__conteudo__topo__nav">
+                    <nav class="indi__conteudo__topo__nav__nav">
+                        <ul class="indi__conteudo__topo__nav__nav__ul">
+                            <li class="indi__conteudo__topo__nav__nav__ul__li ativo lkindiNovosTrades">
+                                <span>Novos&nbsp;</span><span>trades</span> </li>
+                            <li class="indi__conteudo__topo__nav__nav__ul__li lkindiEncerrarTrades">
+                                <span>Encerrar&nbsp;</span>
+                                <span>trades</span> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="indi__conteudo__bottom">
+
+                <!-- #region novos trades -->
+                <div class="indi__conteudo__bottom__novostrades">
+                    <!-- #region ordem de compra novos trades -->
+                    <div class="indi__conteudo__bottom__novostrades__ordemcompra">
+                        <div class="indi__conteudo__bottom__novostrades__ordemcompra__top">
+                            <div class="indi__conteudo__bottom__novostrades__ordemcompra__top__topo">
+                                <div class="indi__conteudo__bottom__novostrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="indi__conteudo__bottom__novostrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="indi__conteudo__bottom__novostrades__ordemcompra__bottom">
+                            <div class="indi__conteudo__bottom__novostrades__ordemcompra__bottom__left">
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                            </div>
+                            <div class="indi__conteudo__bottom__novostrades__ordemcompra__bottom__right">
+                                <p class="indi__conteudo__bottom__novostrades__ordemcompra__bottom__right--titulo">
+                                    Quantidade
+                                </p>
+                                <p class="indi__conteudo__bottom__novostrades__ordemcompra__bottom__right--quantidade">
+                                    1000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion ordem de compra novos trades -->
+                    <!-- #region ordem de venda novos trades -->
+                    <div class="indi__conteudo__bottom__novostrades__ordemvenda">
+                        <div class="indi__conteudo__bottom__novostrades__ordemvenda__top">
+                            <div class="indi__conteudo__bottom__novostrades__ordemvenda__top__topo">
+                                <div class="indi__conteudo__bottom__novostrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp;<span> venda</span>
+                                </div>
+                            </div>
+                            <div class="indi__conteudo__bottom__novostrades__ordemvenda__top--ativo">ITUB4</div>
+                        </div>
+                        <div class="indi__conteudo__bottom__novostrades__ordemvenda__bottom">
+                            <div class="indi__conteudo__bottom__novostrades__ordemvenda__bottom__left">
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                            </div>
+                            <div class="indi__conteudo__bottom__novostrades__ordemvenda__bottom__right">
+                                <p class="indi__conteudo__bottom__novostrades__ordemvenda__bottom__right--titulo">
+                                    Quantidade</p>
+                                <p class="indi__conteudo__bottom__novostrades__ordemvenda__bottom__right--quantidade">
+                                    1000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion novos trades -->
+                </div>
+                <!-- #endregion novos trades -->
+
+                <!-- #region encerrar trades -->
+                <div class="indi__conteudo__bottom__encerrartrades hidden">
+                    <!-- #region encerrar trades ordem de compra -->
+                    <div class="indi__conteudo__bottom__encerrartrades__ordemcompra">
+                        <div class="indi__conteudo__bottom__encerrartrades__ordemcompra__top">
+                            <div class="indi__conteudo__bottom__encerrartrades__ordemcompra__top__topo">
+                                <div
+                                    class="indi__conteudo__bottom__encerrartrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="indi__conteudo__bottom__encerrartrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom">
+                            <div class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__top">
+                                <div class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom">
+                                <div
+                                    class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital">
+                                    <div
+                                        class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="indi__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #endregion -->
+
+                    <!-- #region encerrar trades ordem de venda -->
+                    <div class="indi__conteudo__bottom__encerrartrades__ordemvenda">
+                        <div class="indi__conteudo__bottom__encerrartrades__ordemvenda__top">
+                            <div class="indi__conteudo__bottom__encerrartrades__ordemvenda__top__topo">
+                                <div class="indi__conteudo__bottom__encerrartrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp; <span> venda</span>
+                                </div>
+                            </div>
+                            <div class="indi__conteudo__bottom__encerrartrades__ordemvenda__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom">
+                            <div class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__top">
+                                <div class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom">
+                                <div
+                                    class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital">
+                                    <div
+                                        class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="indi__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+    </section>
+
+    <!-- #endregion indi -->
+    <!-- tela referente ao produto rocket5 -->
+    <!-- #region rocket -->
+
+    <section class="rocket">
+        <div class="rocket__conteudo">
+            <div class="rocket__conteudo__topo">
+                <div class="rocket__conteudo__topo__top">
+                    <label for="rocketMenu" class="rocket__conteudo__topo__top__menu">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <input type="checkbox" name="rocketMenu" id="rocketMenu">
+                    <div class="menu__rocket__dropdown">
+                        <div class="menu__rocket__dropdown__conteudo">
+                            <nav class="menu__rocket__dropdown__conteudo__nav">
+                                <ul class="menu__rocket__dropdown__conteudo__nav__ul">
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li lkHome">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li lkAtlantico">
+                                        <a href="#">Atlântico</a>
+                                    </li>
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li lbBigRocks">
+                                        <a href="#">Big Rocks</a>
+                                    </li>
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li lkIbov">
+                                        <a href="#">IBOV Machine</a>
+                                    </li>
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li lkIndi">
+                                        <a href="#">INDI</a>
+                                    </li>
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li ativo lkRocket">
+                                        <a href="#">Rocket5</a>
+                                    </li>
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li lkSmall">
+                                        <a href="#">Small Rocks</a>
+                                    </li>
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li lkSmart">
+                                        <a href="#">Smart Dividendos</a>
+                                    </li>
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li lkTatica">
+                                        <a href="#">Tática do Dólar</a>
+                                    </li>
+                                    <li class="menu__rocket__dropdown__conteudo__nav__ul__li lkNasdaq">
+                                        <a href="#">The Big Rocks for Nasdaq</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="rocket__conteudo__topo__top__right">
+                        <!-- <img src="/assets/sources/" alt=""> -->
+                    </div>
+                    <div class="rocket__conteudo__topo__top__left">
+                        <img src="/assets/sources/Logo-R5.png">
+                    </div>
+                </div>
+                <div class="rocket__conteudo__topo__nav">
+                    <nav class="rocket__conteudo__topo__nav__nav">
+                        <ul class="rocket__conteudo__topo__nav__nav__ul">
+                            <li class="rocket__conteudo__topo__nav__nav__ul__li ativo lkrocketNovosTrades">
+                                <span>Novos&nbsp;</span><span>trades</span> </li>
+                            <li class="rocket__conteudo__topo__nav__nav__ul__li lkrocketEncerrarTrades">
+                                <span>Encerrar&nbsp;</span>
+                                <span>trades</span> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="rocket__conteudo__bottom">
+
+                <!-- #region novos trades -->
+                <div class="rocket__conteudo__bottom__novostrades">
+                    <!-- #region ordem de compra novos trades -->
+                    <div class="rocket__conteudo__bottom__novostrades__ordemcompra">
+                        <div class="rocket__conteudo__bottom__novostrades__ordemcompra__top">
+                            <div class="rocket__conteudo__bottom__novostrades__ordemcompra__top__topo">
+                                <div class="rocket__conteudo__bottom__novostrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="rocket__conteudo__bottom__novostrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="rocket__conteudo__bottom__novostrades__ordemcompra__bottom">
+                            <div class="rocket__conteudo__bottom__novostrades__ordemcompra__bottom__left">
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                            </div>
+                            <div class="rocket__conteudo__bottom__novostrades__ordemcompra__bottom__right">
+                                <p class="rocket__conteudo__bottom__novostrades__ordemcompra__bottom__right--titulo">
+                                    Quantidade
+                                </p>
+                                <p
+                                    class="rocket__conteudo__bottom__novostrades__ordemcompra__bottom__right--quantidade">
+                                    1000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion ordem de compra novos trades -->
+                    <!-- #region ordem de venda novos trades -->
+                    <div class="rocket__conteudo__bottom__novostrades__ordemvenda">
+                        <div class="rocket__conteudo__bottom__novostrades__ordemvenda__top">
+                            <div class="rocket__conteudo__bottom__novostrades__ordemvenda__top__topo">
+                                <div class="rocket__conteudo__bottom__novostrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp;<span> venda</span>
+                                </div>
+                            </div>
+                            <div class="rocket__conteudo__bottom__novostrades__ordemvenda__top--ativo">ITUB4</div>
+                        </div>
+                        <div class="rocket__conteudo__bottom__novostrades__ordemvenda__bottom">
+                            <div class="rocket__conteudo__bottom__novostrades__ordemvenda__bottom__left">
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                            </div>
+                            <div class="rocket__conteudo__bottom__novostrades__ordemvenda__bottom__right">
+                                <p class="rocket__conteudo__bottom__novostrades__ordemvenda__bottom__right--titulo">
+                                    Quantidade</p>
+                                <p class="rocket__conteudo__bottom__novostrades__ordemvenda__bottom__right--quantidade">
+                                    1000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion novos trades -->
+                </div>
+                <!-- #endregion novos trades -->
+
+                <!-- #region encerrar trades -->
+                <div class="rocket__conteudo__bottom__encerrartrades hidden">
+                    <!-- #region encerrar trades ordem de compra -->
+                    <div class="rocket__conteudo__bottom__encerrartrades__ordemcompra">
+                        <div class="rocket__conteudo__bottom__encerrartrades__ordemcompra__top">
+                            <div class="rocket__conteudo__bottom__encerrartrades__ordemcompra__top__topo">
+                                <div
+                                    class="rocket__conteudo__bottom__encerrartrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="rocket__conteudo__bottom__encerrartrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom">
+                            <div class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__top">
+                                <div class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom">
+                                <div
+                                    class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital">
+                                    <div
+                                        class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="rocket__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #endregion -->
+
+                    <!-- #region encerrar trades ordem de venda -->
+                    <div class="rocket__conteudo__bottom__encerrartrades__ordemvenda">
+                        <div class="rocket__conteudo__bottom__encerrartrades__ordemvenda__top">
+                            <div class="rocket__conteudo__bottom__encerrartrades__ordemvenda__top__topo">
+                                <div
+                                    class="rocket__conteudo__bottom__encerrartrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp; <span> venda</span>
+                                </div>
+                            </div>
+                            <div class="rocket__conteudo__bottom__encerrartrades__ordemvenda__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom">
+                            <div class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__top">
+                                <div class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom">
+                                <div
+                                    class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital">
+                                    <div
+                                        class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="rocket__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+    </section>
+
+    <!-- #endregion rocket -->
+    <!-- tela referente ao produto smallrocks -->
+    <!-- #region smallrocks -->
+
+    <section class="smallrocks">
+        <div class="smallrocks__conteudo">
+            <div class="smallrocks__conteudo__topo">
+                <div class="smallrocks__conteudo__topo__top">
+                    <label for="smallrocksMenu" class="smallrocks__conteudo__topo__top__menu">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <input type="checkbox" name="smallrocksMenu" id="smallrocksMenu">
+                    <div class="menu__smallrocks__dropdown">
+                        <div class="menu__smallrocks__dropdown__conteudo">
+                            <nav class="menu__smallrocks__dropdown__conteudo__nav">
+                                <ul class="menu__smallrocks__dropdown__conteudo__nav__ul">
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li lkHome">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li lkAtlantico">
+                                        <a href="#">Atlântico</a>
+                                    </li>
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li lbBigRocks">
+                                        <a href="#">Big Rocks</a>
+                                    </li>
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li lkIbov">
+                                        <a href="#">IBOV Machine</a>
+                                    </li>
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li lkIndi">
+                                        <a href="#">INDI</a>
+                                    </li>
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li lkRocket">
+                                        <a href="#">Rocket5</a>
+                                    </li>
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li ativo lkSmall">
+                                        <a href="#">Small Rocks</a>
+                                    </li>
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li lkSmart">
+                                        <a href="#">Smart Dividendos</a>
+                                    </li>
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li lkTatica">
+                                        <a href="#">Tática do Dólar</a>
+                                    </li>
+                                    <li class="menu__smallrocks__dropdown__conteudo__nav__ul__li lkNasdaq">
+                                        <a href="#">The Big Rocks for Nasdaq</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="smallrocks__conteudo__topo__top__right">
+                        <!-- <img src="/assets/sources/" alt=""> -->
+                    </div>
+                    <div class="smallrocks__conteudo__topo__top__left">
+                        <img src="/assets/sources/logo-small-rocks.png">
+                    </div>
+                </div>
+                <div class="smallrocks__conteudo__topo__nav">
+                    <nav class="smallrocks__conteudo__topo__nav__nav">
+                        <ul class="smallrocks__conteudo__topo__nav__nav__ul">
+                            <li class="smallrocks__conteudo__topo__nav__nav__ul__li ativo lksmallrocksNovosTrades">
+                                <span>Novos&nbsp;</span><span>trades</span> </li>
+                            <li class="smallrocks__conteudo__topo__nav__nav__ul__li lksmallrocksEncerrarTrades">
+                                <span>Encerrar&nbsp;</span>
+                                <span>trades</span> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="smallrocks__conteudo__bottom">
+
+                <!-- #region novos trades -->
+                <div class="smallrocks__conteudo__bottom__novostrades">
+                    <!-- #region ordem de compra novos trades -->
+                    <div class="smallrocks__conteudo__bottom__novostrades__ordemcompra">
+                        <div class="smallrocks__conteudo__bottom__novostrades__ordemcompra__top">
+                            <div class="smallrocks__conteudo__bottom__novostrades__ordemcompra__top__topo">
+                                <div
+                                    class="smallrocks__conteudo__bottom__novostrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="smallrocks__conteudo__bottom__novostrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="smallrocks__conteudo__bottom__novostrades__ordemcompra__bottom">
+                            <div class="smallrocks__conteudo__bottom__novostrades__ordemcompra__bottom__left">
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                            </div>
+                            <div class="smallrocks__conteudo__bottom__novostrades__ordemcompra__bottom__right">
+                                <p
+                                    class="smallrocks__conteudo__bottom__novostrades__ordemcompra__bottom__right--titulo">
+                                    Quantidade
+                                </p>
+                                <p
+                                    class="smallrocks__conteudo__bottom__novostrades__ordemcompra__bottom__right--quantidade">
+                                    1000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion ordem de compra novos trades -->
+                    <!-- #region ordem de venda novos trades -->
+                    <div class="smallrocks__conteudo__bottom__novostrades__ordemvenda">
+                        <div class="smallrocks__conteudo__bottom__novostrades__ordemvenda__top">
+                            <div class="smallrocks__conteudo__bottom__novostrades__ordemvenda__top__topo">
+                                <div
+                                    class="smallrocks__conteudo__bottom__novostrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp;<span> venda</span>
+                                </div>
+                            </div>
+                            <div class="smallrocks__conteudo__bottom__novostrades__ordemvenda__top--ativo">ITUB4</div>
+                        </div>
+                        <div class="smallrocks__conteudo__bottom__novostrades__ordemvenda__bottom">
+                            <div class="smallrocks__conteudo__bottom__novostrades__ordemvenda__bottom__left">
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                            </div>
+                            <div class="smallrocks__conteudo__bottom__novostrades__ordemvenda__bottom__right">
+                                <p class="smallrocks__conteudo__bottom__novostrades__ordemvenda__bottom__right--titulo">
+                                    Quantidade</p>
+                                <p
+                                    class="smallrocks__conteudo__bottom__novostrades__ordemvenda__bottom__right--quantidade">
+                                    1000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion novos trades -->
+                </div>
+                <!-- #endregion novos trades -->
+
+                <!-- #region encerrar trades -->
+                <div class="smallrocks__conteudo__bottom__encerrartrades hidden">
+                    <!-- #region encerrar trades ordem de compra -->
+                    <div class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra">
+                        <div class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__top">
+                            <div class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__top__topo">
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom">
+                            <div class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__top">
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom">
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital">
+                                    <div
+                                        class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="smallrocks__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #endregion -->
+
+                    <!-- #region encerrar trades ordem de venda -->
+                    <div class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda">
+                        <div class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__top">
+                            <div class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__top__topo">
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp; <span> venda</span>
+                                </div>
+                            </div>
+                            <div class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom">
+                            <div class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__top">
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom">
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital">
+                                    <div
+                                        class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="smallrocks__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+    </section>
+
+    <!-- #endregion smallrocks -->
+    <!-- tela referente ao produto smart dividendos -->
+    <!-- #region dividendos -->
+
+    <section class="dividendos">
+        <div class="dividendos__conteudo">
+            <div class="dividendos__conteudo__topo">
+                <div class="dividendos__conteudo__topo__top">
+                    <label for="dividendosMenu" class="dividendos__conteudo__topo__top__menu">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <input type="checkbox" name="dividendosMenu" id="dividendosMenu">
+                    <div class="menu__dividendos__dropdown">
+                        <div class="menu__dividendos__dropdown__conteudo">
+                            <nav class="menu__dividendos__dropdown__conteudo__nav">
+                                <ul class="menu__dividendos__dropdown__conteudo__nav__ul">
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li lkHome">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li lkAtlantico">
+                                        <a href="#">Atlântico</a>
+                                    </li>
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li lbBigRocks">
+                                        <a href="#">Big Rocks</a>
+                                    </li>
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li lkIbov">
+                                        <a href="#">IBOV Machine</a>
+                                    </li>
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li lkIndi">
+                                        <a href="#">INDI</a>
+                                    </li>
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li lkRocket">
+                                        <a href="#">Rocket5</a>
+                                    </li>
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li lkSmall">
+                                        <a href="#">Small Rocks</a>
+                                    </li>
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li ativo lkSmart">
+                                        <a href="#">Smart Dividendos</a>
+                                    </li>
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li lkTatica">
+                                        <a href="#">Tática do Dólar</a>
+                                    </li>
+                                    <li class="menu__dividendos__dropdown__conteudo__nav__ul__li lkNasdaq">
+                                        <a href="#">The Big Rocks for Nasdaq</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="dividendos__conteudo__topo__top__right">
+                        <!-- <img src="/assets/sources/" alt=""> -->
+                    </div>
+                    <div class="dividendos__conteudo__topo__top__left">
+                        <img src="/assets/sources/logo-dividendos.png">
+                    </div>
+                </div>
+                <div class="dividendos__conteudo__topo__nav">
+                    <nav class="dividendos__conteudo__topo__nav__nav">
+                        <ul class="dividendos__conteudo__topo__nav__nav__ul">
+                            <li class="dividendos__conteudo__topo__nav__nav__ul__li ativo lkdividendosNovosTrades">
+                                <span>Novos&nbsp;</span><span>trades</span> </li>
+                            <li class="dividendos__conteudo__topo__nav__nav__ul__li lkdividendosEncerrarTrades">
+                                <span>Encerrar&nbsp;</span>
+                                <span>trades</span> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="dividendos__conteudo__bottom">
+
+                <!-- #region novos trades -->
+                <div class="dividendos__conteudo__bottom__novostrades">
+                    <!-- #region ordem de compra novos trades -->
+                    <div class="dividendos__conteudo__bottom__novostrades__ordemcompra">
+                        <div class="dividendos__conteudo__bottom__novostrades__ordemcompra__top">
+                            <div class="dividendos__conteudo__bottom__novostrades__ordemcompra__top__topo">
+                                <div
+                                    class="dividendos__conteudo__bottom__novostrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="dividendos__conteudo__bottom__novostrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="dividendos__conteudo__bottom__novostrades__ordemcompra__bottom">
+                            <div class="dividendos__conteudo__bottom__novostrades__ordemcompra__bottom__left">
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                            </div>
+                            <div class="dividendos__conteudo__bottom__novostrades__ordemcompra__bottom__right">
+                                <p
+                                    class="dividendos__conteudo__bottom__novostrades__ordemcompra__bottom__right--titulo">
+                                    Quantidade
+                                </p>
+                                <p
+                                    class="dividendos__conteudo__bottom__novostrades__ordemcompra__bottom__right--quantidade">
+                                    1000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion ordem de compra novos trades -->
+                    <!-- #region ordem de venda novos trades -->
+                    <div class="dividendos__conteudo__bottom__novostrades__ordemvenda">
+                        <div class="dividendos__conteudo__bottom__novostrades__ordemvenda__top">
+                            <div class="dividendos__conteudo__bottom__novostrades__ordemvenda__top__topo">
+                                <div
+                                    class="dividendos__conteudo__bottom__novostrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp;<span> venda</span>
+                                </div>
+                            </div>
+                            <div class="dividendos__conteudo__bottom__novostrades__ordemvenda__top--ativo">ITUB4</div>
+                        </div>
+                        <div class="dividendos__conteudo__bottom__novostrades__ordemvenda__bottom">
+                            <div class="dividendos__conteudo__bottom__novostrades__ordemvenda__bottom__left">
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                            </div>
+                            <div class="dividendos__conteudo__bottom__novostrades__ordemvenda__bottom__right">
+                                <p class="dividendos__conteudo__bottom__novostrades__ordemvenda__bottom__right--titulo">
+                                    Quantidade</p>
+                                <p
+                                    class="dividendos__conteudo__bottom__novostrades__ordemvenda__bottom__right--quantidade">
+                                    1000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion novos trades -->
+                </div>
+                <!-- #endregion novos trades -->
+
+                <!-- #region encerrar trades -->
+                <div class="dividendos__conteudo__bottom__encerrartrades hidden">
+                    <!-- #region encerrar trades ordem de compra -->
+                    <div class="dividendos__conteudo__bottom__encerrartrades__ordemcompra">
+                        <div class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__top">
+                            <div class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__top__topo">
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom">
+                            <div class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__top">
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom">
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital">
+                                    <div
+                                        class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="dividendos__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #endregion -->
+
+                    <!-- #region encerrar trades ordem de venda -->
+                    <div class="dividendos__conteudo__bottom__encerrartrades__ordemvenda">
+                        <div class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__top">
+                            <div class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__top__topo">
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp; <span> venda</span>
+                                </div>
+                            </div>
+                            <div class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom">
+                            <div class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__top">
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom">
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital">
+                                    <div
+                                        class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="dividendos__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+    </section>
+
+    <!-- #endregion dividendos -->
+    <!-- tela referente ao produto tática do dólar -->
+    <!-- #region tatica -->
+
+    <section class="tatica">
+        <div class="tatica__conteudo">
+            <div class="tatica__conteudo__topo">
+                <div class="tatica__conteudo__topo__top">
+                    <label for="taticaMenu" class="tatica__conteudo__topo__top__menu">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <input type="checkbox" name="taticaMenu" id="taticaMenu">
+                    <div class="menu__tatica__dropdown">
+                        <div class="menu__tatica__dropdown__conteudo">
+                            <nav class="menu__tatica__dropdown__conteudo__nav">
+                                <ul class="menu__tatica__dropdown__conteudo__nav__ul">
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li lkHome">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li lkAtlantico">
+                                        <a href="#">Atlântico</a>
+                                    </li>
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li lbBigRocks">
+                                        <a href="#">Big Rocks</a>
+                                    </li>
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li lkIbov">
+                                        <a href="#">IBOV Machine</a>
+                                    </li>
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li lkIndi">
+                                        <a href="#">INDI</a>
+                                    </li>
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li lkRocket">
+                                        <a href="#">Rocket5</a>
+                                    </li>
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li lkSmall">
+                                        <a href="#">Small Rocks</a>
+                                    </li>
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li lkSmart">
+                                        <a href="#">Smart dividendos</a>
+                                    </li>
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li ativo lkTatica">
+                                        <a href="#">Tática do Dólar</a>
+                                    </li>
+                                    <li class="menu__tatica__dropdown__conteudo__nav__ul__li lkNasdaq">
+                                        <a href="#">The Big Rocks for Nasdaq</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tatica__conteudo__topo__top__right">
+                        <!-- <img src="/assets/sources/" alt=""> -->
+                    </div>
+                    <div class="tatica__conteudo__topo__top__left">
+                        <img src="/assets/sources/logo-dolar.png">
+                    </div>
+                </div>
+                <div class="tatica__conteudo__topo__nav">
+                    <nav class="tatica__conteudo__topo__nav__nav">
+                        <ul class="tatica__conteudo__topo__nav__nav__ul">
+                            <li class="tatica__conteudo__topo__nav__nav__ul__li ativo lktaticaNovosTrades">
+                                <span>Novos&nbsp;</span><span>trades</span> </li>
+                            <li class="tatica__conteudo__topo__nav__nav__ul__li lktaticaEncerrarTrades">
+                                <span>Encerrar&nbsp;</span>
+                                <span>trades</span> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="tatica__conteudo__bottom">
+
+                <!-- #region novos trades -->
+                <div class="tatica__conteudo__bottom__novostrades">
+                    <!-- #region ordem de compra novos trades -->
+                    <div class="tatica__conteudo__bottom__novostrades__ordemcompra">
+                        <div class="tatica__conteudo__bottom__novostrades__ordemcompra__top">
+                            <div class="tatica__conteudo__bottom__novostrades__ordemcompra__top__topo">
+                                <div class="tatica__conteudo__bottom__novostrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="tatica__conteudo__bottom__novostrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="tatica__conteudo__bottom__novostrades__ordemcompra__bottom">
+                            <div class="tatica__conteudo__bottom__novostrades__ordemcompra__bottom__left">
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                            </div>
+                            <div class="tatica__conteudo__bottom__novostrades__ordemcompra__bottom__right">
+                                <p class="tatica__conteudo__bottom__novostrades__ordemcompra__bottom__right--titulo">
+                                    Quantidade
+                                </p>
+                                <p
+                                    class="tatica__conteudo__bottom__novostrades__ordemcompra__bottom__right--quantidade">
+                                    1000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion ordem de compra novos trades -->
+                    <!-- #region ordem de venda novos trades -->
+                    <div class="tatica__conteudo__bottom__novostrades__ordemvenda">
+                        <div class="tatica__conteudo__bottom__novostrades__ordemvenda__top">
+                            <div class="tatica__conteudo__bottom__novostrades__ordemvenda__top__topo">
+                                <div class="tatica__conteudo__bottom__novostrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp;<span> venda</span>
+                                </div>
+                            </div>
+                            <div class="tatica__conteudo__bottom__novostrades__ordemvenda__top--ativo">ITUB4</div>
+                        </div>
+                        <div class="tatica__conteudo__bottom__novostrades__ordemvenda__bottom">
+                            <div class="tatica__conteudo__bottom__novostrades__ordemvenda__bottom__left">
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                            </div>
+                            <div class="tatica__conteudo__bottom__novostrades__ordemvenda__bottom__right">
+                                <p class="tatica__conteudo__bottom__novostrades__ordemvenda__bottom__right--titulo">
+                                    Quantidade</p>
+                                <p class="tatica__conteudo__bottom__novostrades__ordemvenda__bottom__right--quantidade">
+                                    1000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion novos trades -->
+                </div>
+                <!-- #endregion novos trades -->
+
+                <!-- #region encerrar trades -->
+                <div class="tatica__conteudo__bottom__encerrartrades hidden">
+                    <!-- #region encerrar trades ordem de compra -->
+                    <div class="tatica__conteudo__bottom__encerrartrades__ordemcompra">
+                        <div class="tatica__conteudo__bottom__encerrartrades__ordemcompra__top">
+                            <div class="tatica__conteudo__bottom__encerrartrades__ordemcompra__top__topo">
+                                <div
+                                    class="tatica__conteudo__bottom__encerrartrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="tatica__conteudo__bottom__encerrartrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom">
+                            <div class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__top">
+                                <div class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom">
+                                <div
+                                    class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital">
+                                    <div
+                                        class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="tatica__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #endregion -->
+
+                    <!-- #region encerrar trades ordem de venda -->
+                    <div class="tatica__conteudo__bottom__encerrartrades__ordemvenda">
+                        <div class="tatica__conteudo__bottom__encerrartrades__ordemvenda__top">
+                            <div class="tatica__conteudo__bottom__encerrartrades__ordemvenda__top__topo">
+                                <div
+                                    class="tatica__conteudo__bottom__encerrartrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp; <span> venda</span>
+                                </div>
+                            </div>
+                            <div class="tatica__conteudo__bottom__encerrartrades__ordemvenda__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom">
+                            <div class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__top">
+                                <div class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom">
+                                <div
+                                    class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital">
+                                    <div
+                                        class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="tatica__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+    </section>
+
+    <!-- #endregion tatica -->
+    <!-- tela referente ao produto nasdaq -->
+    <!-- #region nasdaq -->
+
+    <section class="nasdaq">
+        <div class="nasdaq__conteudo">
+            <div class="nasdaq__conteudo__topo">
+                <div class="nasdaq__conteudo__topo__top">
+                    <label for="nasdaqMenu" class="nasdaq__conteudo__topo__top__menu">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <input type="checkbox" name="nasdaqMenu" id="nasdaqMenu">
+                    <div class="menu__nasdaq__dropdown">
+                        <div class="menu__nasdaq__dropdown__conteudo">
+                            <nav class="menu__nasdaq__dropdown__conteudo__nav">
+                                <ul class="menu__nasdaq__dropdown__conteudo__nav__ul">
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li lkHome">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li lkAtlantico">
+                                        <a href="#">Atlântico</a>
+                                    </li>
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li lbBigRocks">
+                                        <a href="#">Big Rocks</a>
+                                    </li>
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li lkIbov">
+                                        <a href="#">IBOV Machine</a>
+                                    </li>
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li lkIndi">
+                                        <a href="#">INDI</a>
+                                    </li>
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li lkRocket">
+                                        <a href="#">Rocket5</a>
+                                    </li>
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li lkSmall">
+                                        <a href="#">Small Rocks</a>
+                                    </li>
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li lkSmart">
+                                        <a href="#">Smart dividendos</a>
+                                    </li>
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li lkTatica">
+                                        <a href="#">Tática do Dólar</a>
+                                    </li>
+                                    <li class="menu__nasdaq__dropdown__conteudo__nav__ul__li ativo lkNasdaq">
+                                        <a href="#">The Big Rocks for Nasdaq</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="nasdaq__conteudo__topo__top__right">
+                        <!-- <img src="/assets/sources/" alt=""> -->
+                    </div>
+                    <div class="nasdaq__conteudo__topo__top__left">
+                        <img style="width:240px;" src="/assets/sources/logo-nasdaq.png">
+                    </div>
+                </div>
+                <div class="nasdaq__conteudo__topo__nav">
+                    <nav class="nasdaq__conteudo__topo__nav__nav">
+                        <ul class="nasdaq__conteudo__topo__nav__nav__ul">
+                            <li class="nasdaq__conteudo__topo__nav__nav__ul__li ativo lknasdaqNovosTrades">
+                                <span>Novos&nbsp;</span><span>trades</span> </li>
+                            <li class="nasdaq__conteudo__topo__nav__nav__ul__li lknasdaqEncerrarTrades">
+                                <span>Encerrar&nbsp;</span>
+                                <span>trades</span> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="nasdaq__conteudo__bottom">
+
+                <!-- #region novos trades -->
+                <div class="nasdaq__conteudo__bottom__novostrades">
+                    <!-- #region ordem de compra novos trades -->
+                    <div class="nasdaq__conteudo__bottom__novostrades__ordemcompra">
+                        <div class="nasdaq__conteudo__bottom__novostrades__ordemcompra__top">
+                            <div class="nasdaq__conteudo__bottom__novostrades__ordemcompra__top__topo">
+                                <div class="nasdaq__conteudo__bottom__novostrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="nasdaq__conteudo__bottom__novostrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="nasdaq__conteudo__bottom__novostrades__ordemcompra__bottom">
+                            <div class="nasdaq__conteudo__bottom__novostrades__ordemcompra__bottom__left">
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                            </div>
+                            <div class="nasdaq__conteudo__bottom__novostrades__ordemcompra__bottom__right">
+                                <p class="nasdaq__conteudo__bottom__novostrades__ordemcompra__bottom__right--titulo">
+                                    Quantidade
+                                </p>
+                                <p
+                                    class="nasdaq__conteudo__bottom__novostrades__ordemcompra__bottom__right--quantidade">
+                                    1000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion ordem de compra novos trades -->
+                    <!-- #region ordem de venda novos trades -->
+                    <div class="nasdaq__conteudo__bottom__novostrades__ordemvenda">
+                        <div class="nasdaq__conteudo__bottom__novostrades__ordemvenda__top">
+                            <div class="nasdaq__conteudo__bottom__novostrades__ordemvenda__top__topo">
+                                <div class="nasdaq__conteudo__bottom__novostrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp;<span> venda</span>
+                                </div>
+                            </div>
+                            <div class="nasdaq__conteudo__bottom__novostrades__ordemvenda__top--ativo">ITUB4</div>
+                        </div>
+                        <div class="nasdaq__conteudo__bottom__novostrades__ordemvenda__bottom">
+                            <div class="nasdaq__conteudo__bottom__novostrades__ordemvenda__bottom__left">
+                                <p class="stopLoss">Stop loss: R$ <span> 64,00 </span></p>
+                                <p class="ultimoFechamento">Último fechamento: R$ <span> 65,00 </span></p>
+                                <p class="limiteEntrada">Preço limite para entrada: R$ <span> 67,25 </span></p>
+                                <p class="stopGain">Stop gain: R$ <span> 72,90 </span> </p>
+                            </div>
+                            <div class="nasdaq__conteudo__bottom__novostrades__ordemvenda__bottom__right">
+                                <p class="nasdaq__conteudo__bottom__novostrades__ordemvenda__bottom__right--titulo">
+                                    Quantidade</p>
+                                <p class="nasdaq__conteudo__bottom__novostrades__ordemvenda__bottom__right--quantidade">
+                                    1000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion novos trades -->
+                </div>
+                <!-- #endregion novos trades -->
+
+                <!-- #region encerrar trades -->
+                <div class="nasdaq__conteudo__bottom__encerrartrades hidden">
+                    <!-- #region encerrar trades ordem de compra -->
+                    <div class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra">
+                        <div class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__top">
+                            <div class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__top__topo">
+                                <div
+                                    class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__top__topo--ordemcompra">
+                                    ordem de &nbsp; <span> compra</span>
+                                </div>
+                            </div>
+                            <div class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom">
+                            <div class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__top">
+                                <div class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom">
+                                <div
+                                    class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital">
+                                    <div
+                                        class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="nasdaq__conteudo__bottom__encerrartrades__ordemcompra__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #endregion -->
+
+                    <!-- #region encerrar trades ordem de venda -->
+                    <div class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda">
+                        <div class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__top">
+                            <div class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__top__topo">
+                                <div
+                                    class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__top__topo--ordemvenda">
+                                    ordem de &nbsp; <span> venda</span>
+                                </div>
+                            </div>
+                            <div class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__top--ativo">ITUB4
+                            </div>
+                        </div>
+                        <div class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom">
+                            <div class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__top">
+                                <div class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__left">
+                                    <p>Data de entrada: </p>
+                                    <p>Data de saída: </p>
+                                    <p>Preço de entrada: </p>
+                                    <p>Preço de saída: </p>
+
+                                </div>
+                                <div class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__top__right">
+
+                                    <p class="dataEntrada">26/05/20 </p>
+                                    <p class="dataSaida">30/04/20</p>
+                                    <p class="precoEntrada">R$ 66,00 </p>
+                                    <p class="precoSaida">À mercado </p>
+                                </div>
+
+
+                            </div>
+                            <div class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom">
+                                <div
+                                    class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital">
+                                    <div
+                                        class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        impacto no capital %</div>
+                                    <div
+                                        class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        1.67</div>
+                                </div>
+                                <div
+                                    class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__variacaoativo">
+                                    <div
+                                        class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--titulo">
+                                        variação de ativo %</div>
+                                    <div
+                                        class="nasdaq__conteudo__bottom__encerrartrades__ordemvenda__bottom__bottom__impactocapital--conteudo">
+                                        13,43</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion-->
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+    </section>
+
+    <!-- #endregion nasdaq -->
+
+    <!-- importação jquery -->
+    <script src="/assets/scripts/jquery.js"></script>
+    <!-- importação scripts para a tela principal -->
+    <script src="/assets/scripts/main.js"></script>
+</body>
+
+</html>

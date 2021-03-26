@@ -1,0 +1,916 @@
+.atlantico {
+    @include size(100%, 100vh);
+
+    &__conteudo {
+        @include size();
+        background-color: $bg-dark-secondary;
+
+        &__topo {
+            @include size(100%, 220px);
+
+            &__top {
+                @include size(100%, calc(100% - 65px));
+                @include flex(row, stretch, stretch);
+                background-color: $bg-dark-primary;
+                position: relative;
+
+                &__menu {
+                    @include create_menu($atlantico);
+                    @include circle(30px);
+                    top: 10px;
+                    left: 10px;
+                    border: 0px;
+
+                }
+
+                &__right {
+                    flex: 1 1 50%;
+                    @include flex(row, flex-start, center);
+                }
+
+                &__left {
+                    flex: 1 1 50%;
+                    @include flex();
+                }
+            }
+
+            &__nav {
+                @include size(100%, 65px);
+                background-color: $bg-dark-primary-light;
+
+                // background-color:white;
+                &__nav {
+                    @include size();
+
+                    &__ul {
+                        @include size();
+                        @include flex(row, flex-start, stretch);
+
+                        &__li {
+                            @include size(180px, 100%);
+                            @include flex();
+                            padding: 20px;
+                            font-size: 0.9rem;
+                            user-select: none;
+                            cursor: pointer;
+                            transition: background-color 0.3s,  border-bottom 0.5s;
+                            border-bottom: 2px solid black;
+
+                            &.ativo {
+                                border-bottom: 2px solid $texto;
+                                font-weight: bolder;
+                            }
+
+                            &:hover {
+                                background-color: black;
+                                // border-bottom: 2px solid $texto;
+                                background-color: $atlantico-transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bottom {
+            @include size(100%, calc(100% - 220px));
+            background-color: $bg-dark-primary-lighter; //aquiiii
+
+            // #region novos trades
+            &__novostrades {
+                @include size();
+                padding: 25px;
+                overflow-y: auto;
+                @include flex(row, space-evenly, stretch);
+                flex-wrap: wrap;
+
+                &__ordemcompra {
+                    flex: 1 1 280px;
+                    height: 320px;
+                    border-radius: 0.4rem;
+                    box-shadow: 0px 0px 8px 3px $atlantico;
+                    border: 2.5px solid transparent;
+                    border-left: 8px solid $atlantico;
+                    background-color: black;
+                    margin-bottom: 25px;
+                    @include flex(column, stretch, stretch);
+                    margin: 25px;
+                    max-width: 500px;
+                    min-width: 380px;
+                    animation: animacao_cards 0.8s ease;
+
+                    &:hover {
+                        border: 2.5px solid $atlantico;
+                        border-left: 8px solid $atlantico;
+                    }
+
+                    &__top {
+                        @include size(100%, 90px);
+                        border-bottom: 1px solid $atlantico;
+                        position: relative;
+
+                        &__topo {
+                            @include size(100%, 100%);
+                            padding: 5px;
+                            @include flex(row, stretch, stretch);
+
+                            &--ordemcompra {
+                                @include flex(row, flex-start, flex-start);
+                                flex: 1 1 40%;
+                                padding: 5px;
+                                font-size: 0.7rem;
+                                user-select: none;
+                                cursor: context-menu;
+
+                                span {
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+
+                        &--ativo {
+                            @include size(200px, 90px);
+                            border-radius: 0.4rem;
+                            background-color: $bg-dark-primary;
+                            box-shadow: 0px 1px 4px 1pt $atlantico;
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -100px;
+                            top: 50%;
+                            // margin-top: -10px;
+                            font-weight: bolder;
+                            @include flex();
+                            font-size: 1.1rem;
+                        }
+
+                    }
+
+                    &__bottom {
+                        @include size(100%, calc(320px - 90px));
+                        padding-top: 45px;
+                        @include flex(row, stretch, stretch);
+
+                        &__left {
+                            flex: 1 1 70%;
+                            padding: 5px;
+                            padding-left: 15px;
+                            padding-top: 20px;
+                            // background-color: tomato;
+                            @include flex(column, flex-start, flex-start);
+                            font-size: 0.75rem;
+
+                            p {
+                                font-weight: bolder;
+
+                                &:not(:last-of-type) {
+                                    margin-bottom: 10px;
+                                }
+
+                                span {
+                                    font-weight: lighter;
+                                }
+                            }
+                        }
+
+                        &__right {
+                            flex: 1 1 30%;
+                            padding: 5px;
+                            // background-color: blueviolet;
+                            @include flex(column, flex-start, center);
+                            font-weight: bolder;
+                            padding-top: 20px;
+                            &--quantidade{
+                                font-weight: lighter;
+                            }
+                        }
+                    }
+                }
+
+                &__ordemvenda {
+                    flex: 1 1 280px;
+                    height: 320px;
+                    border-radius: 0.4rem;
+                    box-shadow: 0px 0px 8px 3px $atlantico;
+                    border: 2.5px solid transparent;
+                    border-left: 8px solid $atlantico;
+                    background-color: white;
+                    min-width: 380px;
+                    animation: animacao_cards 0.8s ease;
+
+                    * {
+                        color: black;
+
+                    }
+
+                    margin-bottom: 25px;
+                    @include flex(column, stretch, stretch);
+                    margin: 25px;
+                    max-width: 500px;
+
+                    &:hover {
+                        border: 2.5px solid $atlantico;
+                        border-left: 8px solid $atlantico;
+                    }
+
+                    &__top {
+                        @include size(100%, 90px);
+                        border-bottom: 1px solid $atlantico;
+                        position: relative;
+
+                        &__topo {
+                            @include size(100%, 100%);
+                            padding: 5px;
+                            @include flex(row, stretch, stretch);
+
+                            &--ordemvenda {
+                                @include flex(row, flex-start, flex-start);
+                                flex: 1 1 40%;
+                                padding: 5px;
+                                font-size: 0.7rem;
+                                user-select: none;
+                                cursor: context-menu;
+                                color: $atlantico;
+
+                                span {
+                                    color: $atlantico;
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+
+                        &--ativo {
+                            @include size(200px, 90px);
+                            border-radius: 0.4rem;
+                            background-color: white;
+                            box-shadow: 0px 1px 4px 1pt $atlantico;
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -100px;
+                            top: 50%;
+                            // margin-top: -10px;
+                            font-weight: bolder;
+                            @include flex();
+                            font-size: 1.1rem;
+                            color: $atlantico;
+                        }
+
+                    }
+
+                    &__bottom {
+                        @include size(100%, calc(320px - 90px));
+                        padding-top: 45px;
+                        @include flex(row, stretch, stretch);
+
+                        // &__novostrades {
+
+                        &__left {
+                            flex: 1 1 70%;
+                            padding: 5px;
+                            padding-left: 15px;
+                            padding-top: 20px;
+                            // background-color: tomato;
+                            @include flex(column, flex-start, flex-start);
+                            font-size: 0.75rem;
+
+                            p {
+                                font-weight: bolder;
+
+                                &:not(:last-of-type) {
+                                    margin-bottom: 10px;
+                                }
+
+                                span {
+                                    font-weight: lighter;
+                                }
+                            }
+                        }
+
+                        &__right {
+                            flex: 1 1 30%;
+                            padding: 5px;
+                            // background-color: blueviolet;
+                            @include flex(column, flex-start, center);
+                            font-weight: bolder;
+                            padding-top: 20px;
+
+                            &--titulo {
+                                color: $atlantico;
+                            }
+
+                            &--quantidade {
+                                font-weight: lighter
+                            }
+                        }
+
+                        // }
+
+                    }
+                }
+            }
+
+            // #endregion novos trades
+            //#region encerrar trades
+            &__encerrartrades {
+                @include size();
+                padding: 25px;
+                overflow-y: auto;
+                @include flex(row, space-evenly, stretch);
+                flex-wrap: wrap;
+
+                &__ordemcompra {
+                    flex: 1 1 280px;
+                    height: 340px;
+                    border-radius: 0.4rem;
+                    box-shadow: 0px 0px 8px 3px $atlantico;
+                    border: 2.5px solid transparent;
+                    border-left: 8px solid $atlantico;
+                    background-color: black;
+                    margin-bottom: 25px;
+                    @include flex(column, stretch, stretch);
+                    margin: 25px;
+                    max-width: 500px;
+                    min-width: 380px;
+                    animation: animacao_cards 0.8s ease;
+
+                    &:hover {
+                        border: 2.5px solid $atlantico;
+                        border-left: 8px solid $atlantico;
+                    }
+
+                    &__top {
+                        @include size(100%, 60px);
+                        border-bottom: 1px solid $atlantico;
+                        position: relative;
+
+                        &__topo {
+                            @include size(100%, 100%);
+                            padding: 5px;
+                            @include flex(row, stretch, stretch);
+
+                            &--ordemcompra {
+                                @include flex(row, flex-start, flex-start);
+                                flex: 1 1 40%;
+                                padding: 5px;
+                                font-size: 0.7rem;
+                                user-select: none;
+                                cursor: context-menu;
+
+                                span {
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+
+                        &--ativo {
+                            @include size(150px, 70px);
+                            border-radius: 0.4rem;
+                            background-color: $bg-dark-primary;
+                            box-shadow: 0px 1px 4px 1pt $atlantico;
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -75px;
+                            top: 50%;
+                            font-weight: bolder;
+                            @include flex();
+                            font-size: 1.1rem;
+                        }
+
+                    }
+
+                    &__bottom {
+                        @include size(100%, 280px);
+                        @include flex(column, stretch, stretch);
+                        padding: 10px;
+
+                        &__top {
+                            padding: 5px;
+                            @include size(100%, 180px);
+                            padding: 25px;
+                            padding-top: 50px;
+                            @include flex(row, flex-start, stretch);
+                            font-size: 0.75rem;
+
+                            &__left {
+                                @include size(50%, 100%);
+
+                                p {
+                                    font-weight: bolder;
+                                    height: 23px;
+                                    @include flex(row, flex-start, flex-start);
+                                    padding-left: 5px;
+                                }
+
+                            }
+
+                            &__right {
+                                @include size(50%, 100%);
+                                padding-left: 5px;
+
+                                p {
+                                    @include flex(row, flex-start, flex-start);
+                                    height: 23px;
+                                    // font-weight: bolder;
+                                }
+                            }
+
+
+                        }
+
+                        &__bottom {
+                            @include size(100%, 70px);
+                            padding: 5px;
+                            @include flex(row, center, center);
+                            font-size: 0.8rem;
+                            border-top: 1px solid $atlantico;
+
+                            &__impactocapital {
+                                @include size();
+                                @include flex(column, center, center);
+                                font-weight: 0.8rem;
+
+                                &--conteudo {
+                                    font-weight: bolder;
+                                }
+                            }
+
+                            &__variacaoativo {
+                                @include size();
+                                @include flex(column, center, center);
+                                font-weight: 0.8rem;
+
+                                &--conteudo {
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &__ordemvenda {
+                    flex: 1 1 280px;
+                    height: 340px;
+                    border-radius: 0.4rem;
+                    box-shadow: 0px 0px 8px 3px $atlantico;
+                    border: 2.5px solid transparent;
+                    border-left: 8px solid $atlantico;
+                    background-color: white;
+                    min-width: 380px;
+                    animation: animacao_cards 0.8s ease;
+
+                    * {
+                        color: black;
+
+                    }
+
+                    margin-bottom: 25px;
+                    @include flex(column, stretch, stretch);
+                    margin: 25px;
+                    max-width: 500px;
+
+                    &:hover {
+                        border: 2.5px solid $atlantico;
+                        border-left: 8px solid $atlantico;
+                    }
+
+                    &__top {
+                        @include size(100%, 60px);
+                        border-bottom: 1px solid $atlantico;
+                        position: relative;
+
+                        &__topo {
+                            @include size(100%, 100%);
+                            padding: 5px;
+                            @include flex(row, stretch, stretch);
+
+                            &--ordemvenda {
+                                @include flex(row, flex-start, flex-start);
+                                flex: 1 1 40%;
+                                padding: 5px;
+                                font-size: 0.7rem;
+                                user-select: none;
+                                cursor: context-menu;
+
+                                span {
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+
+                        &--ativo {
+                            @include size(150px, 70px);
+                            border-radius: 0.4rem;
+                            background-color: white;
+                            box-shadow: 0px 1px 4px 1pt $atlantico;
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -75px;
+                            top: 50%;
+                            font-weight: bolder;
+                            @include flex();
+                            font-size: 1.1rem;
+                        }
+
+                    }
+
+                    &__bottom {
+                        @include size(100%, 280px);
+                        @include flex(column, stretch, stretch);
+                        padding: 10px;
+
+                        &__top {
+                            padding: 5px;
+                            @include size(100%, 180px);
+                            padding: 25px;
+                            padding-top: 50px;
+                            @include flex(row, flex-start, stretch);
+                            font-size: 0.75rem;
+
+                            &__left {
+                                @include size(50%, 100%);
+
+                                p {
+                                    font-weight: bolder;
+                                    height: 23px;
+                                    @include flex(row, flex-start, flex-start);
+                                    padding-left: 5px;
+                                }
+
+                            }
+
+                            &__right {
+                                @include size(50%, 100%);
+                                padding-left: 5px;
+
+                                p {
+                                    @include flex(row, flex-start, flex-start);
+                                    height: 23px;
+                                    // font-weight: bolder;
+                                }
+                            }
+
+
+                        }
+
+                        &__bottom {
+                            @include size(100%, 70px);
+                            padding: 5px;
+                            @include flex(row, center, center);
+                            font-size: 0.8rem;
+                            border-top: 1px solid $atlantico;
+
+                            &__impactocapital {
+                                @include size();
+                                @include flex(column, center, center);
+                                font-weight: 0.8rem;
+
+                                &--conteudo {
+                                    font-weight: bolder;
+                                }
+                            }
+
+                            &__variacaoativo {
+                                @include size();
+                                @include flex(column, center, center);
+                                font-weight: 0.8rem;
+
+                                &--conteudo {
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+            }
+
+            //#endregion encerrar trades
+        }
+    }
+}
+
+// responsividade
+
+@include papabear(900px) {
+    .atlantico {
+        &__conteudo {
+            padding: 0px;
+
+            &__topo {
+
+                &__top {
+
+                    &__right {
+                        display: none;
+                    }
+
+                }
+            }
+
+            &__bottom {
+                &__novostrades {
+                    padding: 5px;
+
+                    &__ordemcompra {
+                        margin: 10px;
+                    }
+
+                    &__ordemvenda {
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include papabear(930px) {
+    .atlantico {
+        &__conteudo {
+            &__bottom {
+                &__novostrades {
+                    padding: 0px;
+
+                    &__ordemcompra {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+
+                    &__ordemvenda {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+                &__encerrartrades {
+                    padding: 0px;
+
+                    &__ordemcompra {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+
+                    &__ordemvenda {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include papabear(500px) {
+    .atlantico {
+        &__conteudo {
+            &__bottom {
+                &__encerrartrades {
+                    padding: 0px;
+
+                    &__ordemcompra {
+                        margin: 15px;
+                        min-width: 280px;
+
+                        &__bottom {
+                            &__bottom {
+                                &__impactocapital {
+                                    font-size: 0.7rem;
+                                }
+
+                                &__variacaoativo {
+                                    font-size: 0.7rem;
+                                }
+                            }
+                        }
+                    }
+
+                    &__ordemvenda {
+                        margin: 15px;
+                        min-width: 280px;
+
+                        &__bottom {
+                            &__bottom {
+                                &__impactocapital {
+                                    font-size: 0.7rem;
+                                }
+
+                                &__variacaoativo {
+                                    font-size: 0.7rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &__novostrades {
+                    padding: 0px !important;
+
+                    &__ordemcompra {
+                        margin: 15px;
+                        min-width: 280px;
+
+                        &__bottom {
+                            flex-direction: column;
+
+                            &__right {
+                                padding: 10px;
+                            }
+                        }
+                    }
+
+                    &__ordemvenda {
+                        margin: 15px;
+                        min-width: 280px;
+
+                        &__bottom {
+                            flex-direction: column;
+
+                            &__right {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include papabear(350px) {
+    .atlantico {
+        &__conteudo {
+            &__topo {
+                &__top {
+                    &__left {
+                        img {
+                            width: 220px;
+                        }
+                    }
+                }
+
+                &__nav {
+                    &__nav {
+                        &__ul {
+                            &__li {
+                                // width:fit-content;
+                                font-size: 0.8rem;
+                                @include flex(column, center, flex-start);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__bottom {
+                &__novostrades {
+                    padding: 0px !important;
+
+                    &__ordemcompra {
+                        margin: 15px;
+                        min-width: 50px;
+                        font-size: 0.8rem;
+                    }
+
+                    &__ordemvenda {
+                        margin: 15px;
+                        min-width: 50px;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                &__encerrartrades {
+                    padding: 0px !important;
+
+                    &__ordemcompra {
+                        margin: 15px 10px;
+                        min-width: 50px;
+                        font-size: 0.8rem;
+
+                        &__bottom {
+                            &__top {
+                                padding: 0px;
+                                padding-top: 40px;
+
+                                p {
+                                    padding-left: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &__ordemvenda {
+                        // margin: 15px;
+                        // min-width: 50px;
+                        // font-size: 0.8rem;
+                        margin: 15px 10px;
+                        min-width: 50px;
+                        font-size: 0.8rem;
+
+                        &__bottom {
+                            &__top {
+                                padding: 0px;
+                                padding-top: 40px;
+
+                                p {
+                                    padding-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+// menu tela atlantico
+
+#atlMenu {
+    display: none;
+
+    &:checked {
+        ~.menu__atlantico__dropdown {
+            display: block;
+        }
+    }
+}
+
+.menu__atlantico__dropdown {
+    @include size(280px, 400px);
+    border-radius: 0rem 0.8rem 0.8rem 0.8rem;
+    z-index: $menuIndex;
+    background-color: $bg-dark-primary;
+    box-shadow: 0px 0px 5px 1px $atlantico;
+    overflow-y: auto;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: none;
+    animation: menu_principal__dropdown__animation 0.5s ease-in-out;
+
+    &__conteudo {
+        @include size();
+        background-color: $bg-dark-primary;
+
+        &__nav {
+            @include size();
+
+            &__ul {
+                @include size();
+                max-height: 450px;
+                overflow-y: auto;
+
+                &__li {
+                    @include size(100%, 45px);
+                    @include flex(row, flex-start, center);
+                    padding: 10px 20px;
+                    border-left: 5px solid transparent;
+                    transition: all 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        border-left: 3px solid $atlantico;
+                        padding-left: 35px;
+                    }
+
+                    &:active {
+                        padding-left: 34px;
+                        background-color: $bg-dark-secondary;
+
+                        a {
+                            color: $atlantico;
+                        }
+                    }
+
+                    &.ativo {
+                        border-left: 3px solid $atlantico;
+                        // a {
+                        //     padding-left: 34px;
+                        // }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// responsividade do menu dropdown do atlantico
+@include papabear(320px) {
+    .menu__atlantico__dropdown {
+        left: 0px;
+        width: 100%;
+    }
+}
+
+// animações e efeitos dos cards
+
+@keyframes animacao_cards{
+    from{
+        transform:translate(-25px,0px)
+    }
+    
+    to{
+        transform:translate(0px,0px)
+    }
+}

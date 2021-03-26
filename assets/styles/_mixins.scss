@@ -1,0 +1,73 @@
+@mixin size($w:100%,$h:100%){
+    width:$w;
+    height:$h;
+}
+
+@mixin flex ($d:row,$j:center,$a:center) {
+    display: flex;
+    flex-direction: $d;
+    justify-content: $j;
+    align-items: $a;
+}
+
+@mixin circle($size){
+    @include size($size,$size);
+    border-radius:50%;
+}
+
+
+@mixin papabear($width) {
+  @media screen and(max-width:$width) {
+    @content;
+  }
+}
+
+@mixin mamabear($width) {
+  @media screen and(min-width:$width) {
+    @content;
+  }
+}
+
+@mixin create_menu($color){
+    @include circle(45px);
+    background-color: rgba(255, 255, 255, 0.377);
+    position: absolute;
+    bottom: 25px;
+    right: -20px;
+    padding: 8px;
+    border: 3px solid $color;
+    @include flex(column, space-evenly, flex-start);
+    cursor: pointer;
+    transition: all 0.3s;
+    // z-index: 6;
+
+    span.first {
+        @include size(100%, 3px);
+        background-color: white;
+        border-radius: 0.4rem;
+    }
+
+    span.second {
+        @include size(60%, 3px);
+        background-color: white;
+        border-radius: 0.4rem;
+    }
+
+    span.third {
+        @include size(80%, 3px);
+        background-color: white;
+        border-radius: 0.4rem;
+    }
+
+    &:hover {
+        border: 3px solid white;
+
+        span {
+            background-color: $color;
+        }
+    }
+
+    &:active {
+        padding-left: 12px;
+    }
+}

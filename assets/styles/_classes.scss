@@ -1,0 +1,105 @@
+// 
+
+.hidden{
+    display: none !important;
+}
+
+// icone do menu
+.menu {
+    @include create_menu($titulo);
+}
+
+#menu_principal{
+    display: none;
+    &:checked{
+        ~.menu_principal__dropdown{
+            display: block;
+        }
+    }
+}
+
+.menu_principal__dropdown{
+    @include size(100%,90%);
+    border-radius: 0.4rem;
+    z-index:$menuIndex;
+    background-color: $bg-dark-primary;
+    border:1px solid $titulo;
+    overflow-y: auto;
+    position: absolute;
+    bottom:50px;
+    right:0px;
+    display: none;
+    animation:menu_principal__dropdown__animation 0.10s ease-in-out;
+
+    .menu_principal__dropdown__conteudo{
+        @include size();
+        background-color: $bg-dark-primary;
+        &__nav {
+            @include size();
+
+            &__ul {
+                @include size();
+                max-height: 450px;
+                overflow-y: auto;
+
+                &__li {
+                    @include size(100%, 45px);
+                    @include flex(row,flex-start,center);
+                    padding: 10px 20px;
+                    border-left: 5px solid transparent;
+                    transition: all 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        border-left: 5px solid $titulo;
+                        padding-left: 35px;
+                    }
+
+                    &:active {
+                        padding-left: 34px;
+                        background-color: $bg-dark-secondary;
+
+                        a {
+                            color: $titulo;
+                        }
+                    }
+
+                    &.ativo {
+                        border-left: 3px solid $titulo;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// arrumar icone do menu em telas menores
+@include papabear(300px){
+    .menu{
+        bottom:10px;
+        right:10px;
+    }
+}
+
+// animação quando menu altera o display
+@keyframes menu_principal__dropdown__animation{
+    from{
+        transform:translateY(50px);
+    }
+
+    to{
+        transform:translateY(0px);
+    }
+}
+
+// classe que esconde os elementos em visualizações acima de 500px
+.hide-on-desk {
+    display: none;
+}
+
+@include papabear(500px) {
+    .hide-on-desk {
+        display: block;
+    }
+}

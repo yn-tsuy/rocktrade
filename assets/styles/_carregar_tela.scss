@@ -1,0 +1,57 @@
+.carrega_pagina_rocktrade{
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    @include size(100%,auto);
+    min-height: 100vh;
+    background-color: $bg-dark-secondary;
+    @include flex(column,center,center);
+    z-index: $carregaIndex;
+    // display: none; // ALETAR ESSA LINHA NO FINAL DO DESENVOLVIMENTO
+
+    &__spinner{
+        @include circle(110px);
+        border:6px solid $titulo;
+        border-top:6px solid rgba(255, 255, 255, 0.062);
+        border-left:6px solid rgba(255, 255, 255, 0.062);
+        margin-bottom: 25px;
+        opacity:0;
+        animation: carrega_pagina_rocktrade__spinner 1.2s linear infinite 1s;
+        animation-fill-mode: forwards;
+        @include flex();
+        img{
+            opacity:0.1;
+            width:90px;
+        }
+    }
+
+    &__logo{
+        animation: carrega_pagina_rocktrade__logo 1s ease-in-out;
+    }
+
+}
+
+@keyframes carrega_pagina_rocktrade__spinner{
+    from{
+        transform: rotate(0deg);
+        opacity:1;
+    }
+    
+    to{
+        transform: rotate(360deg);
+        opacity:1;
+    }
+}
+
+@keyframes carrega_pagina_rocktrade__logo{
+    from{
+        transform: translateY(-20px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

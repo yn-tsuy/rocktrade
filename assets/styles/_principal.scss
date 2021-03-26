@@ -1,0 +1,194 @@
+.principal {
+    @include size(100%, 100vh);
+    background-color: $bg-dark-primary;
+    padding: 50px 150px;
+
+    &__conteudo {
+        @include size();
+        @include flex(column, stretch, stretch);
+        padding: 0px 180px;
+        border-radius: 0.5rem;
+
+        &__top {
+            @include size(100%, 110px);
+            @include flex(row, stretch, stretch);
+
+            &--logo {
+                flex: 1 1 calc(100% - 300px);
+                @include flex(row, flex-start, center);
+            }
+
+            &__user_information {
+                flex: 1 1 300px;
+                @include flex(row, flex-end, center);
+                cursor: pointer;
+
+                &--imagem {
+                    @include circle(60px);
+                    background-color: rgba(245, 245, 245, 0.5);
+                    background-image: url('/assets/sources/no_photo_user.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    margin-right: 25px;
+                    border-bottom: 6px solid $titulo;
+                }
+
+                &--nome {
+                    color: $texto;
+                    font-family: mRegular;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        &__bottom {
+            @include size(100%, calc(100% - 110px));
+            @include flex(row, stretch, stretch);
+
+            &__menu {
+                flex: 1 1 50%;
+                user-select: none;
+
+                &__nav {
+                    @include size();
+
+                    &__ul {
+                        @include size(300px, auto);
+                        background-color: white;
+                        max-height: 450px;
+                        overflow-y: auto;
+
+                        &__li {
+                            @include size(100%, 45px);
+                            padding: 20px;
+                            background-color: $bg-dark-secondary;
+                            border-left: 5px solid transparent;
+                            transition: all 0.5s;
+                            cursor: pointer;
+
+                            &:hover {
+                                border-left: 3px solid $titulo;
+                                padding-left: 35px;
+                            }
+
+                            &:active {
+                                padding-left: 34px;
+
+                                a {
+                                    color: $titulo;
+                                }
+                            }
+
+                            &.ativo {
+                                border-left: 3px solid $titulo;
+
+                                // a {
+                                //     color: $titulo;
+                                // }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // &__welcome{
+            //     flex:1 1 50%;
+            //     @include flex();
+            //     flex-direction: column;
+            //     color:$texto;
+            //     font-family: mLight;
+            // }
+        }
+    }
+}
+
+// responsividade da tela principal
+
+@include papabear(1250px) {
+    .principal {
+        padding: 0px;
+
+        &__conteudo {
+            padding: 25px 120px;
+        }
+    }
+}
+
+@include papabear(900px) {
+    .principal {
+        &__conteudo {
+            padding: 25px 50px;
+        }
+    }
+}
+
+@include papabear(750px) {
+    .principal {
+        &__conteudo {
+            &__bottom {
+                &__menu {
+                    &__nav {
+                        &__ul {
+                            width: 100%;
+                            // border-radius: 0.4rem;
+                            // box-shadow: 0px 0px 6px 1px $titulo-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include papabear(500px) {
+    .principal {
+        &__conteudo {
+            padding: 0px 50px;
+
+            &__top {
+                &--logo {
+                    @include flex(row, center, center);
+                }
+                &__user_information {
+                    display: none;
+                }
+            }
+
+            &__bottom {
+                &__menu {
+                    display: none;
+                }
+                &__mobile {
+                    @include size();
+                    &__conteudo{
+                        @include size();
+                        @include flex(column,flex-start,center);
+                        position:relative;
+                        &--user_picture_mobile{
+                            @include circle(150px);
+                            background-color: rgba(255, 255, 255, 0.322);
+                            background-image: url('/assets/sources/no_photo_user.png');
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position:center;
+                            margin-bottom: 25px;
+                            border-bottom: 12px solid $titulo;
+                        }
+                        &--user_name_mobile{
+                            color:$texto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include papabear(300px) {
+    .principal {
+        &__conteudo {
+            padding: 0px;
+        }
+    }
+}
