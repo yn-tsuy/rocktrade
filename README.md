@@ -20,7 +20,8 @@ Desenvolveria uma barra lateral fixa com valor de width baixo contendo apenas o 
 
 Também estudaria a framework React para o projeto ou usuaria Javascript puro, utilizei jquery ao invés de javascript pois este diminui as linhas de código e, por consequência, diminui o tempo de desenvolvimento.  E o React demandaria tempo para a curva de aprendizado e estava trabalhando com uma deadline.
 
-Desafio solicitado pela: Rocktrade
+Desafio solicitado pela: Rocktrade.
+
 Desenvolvedora: Janaína Santos da Silva | she.jcodes@gmail.com
 
 Muito obrigado pelo seu tempo!
